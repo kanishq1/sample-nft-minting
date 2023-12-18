@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@arcana/auth": "^1.0.8",
+    "@arcana/auth-react": "^0.0.3",
     "axios": "^1.6.2",
     "next": "14.0.4",
     "react": "^18",

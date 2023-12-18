@@ -1,6 +1,10 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
+import { ProvideAuth } from "@arcana/auth-react";
 import { MintNft } from "./components/mint-nft";
+import { getAuth } from "./getArcanaAuth";
+
+const auth = getAuth();
 
 export default function Home() {
     return (
@@ -26,8 +30,9 @@ export default function Home() {
                     </a>
                 </div>
             </div>
-
-            <MintNft />
+            <ProvideAuth provider={auth}>
+                <MintNft />
+            </ProvideAuth>
 
             <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left"></div>
         </main>
