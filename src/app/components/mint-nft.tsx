@@ -30,8 +30,8 @@ const config = {
 
 export const MintNft = () => {
     const isLoggedIn = auth.isLoggedIn();
-    const [nftData, setNftData] = React.useState({});
-    const [loading, setLoading] = React.useState(true);
+    const [nftData, setNftData] = React.useState(null);
+    const [loading, setLoading] = React.useState(false);
     const mintNft = async () => {
         setLoading(true);
         const publicKey = await (await auth.getUser()).address;
