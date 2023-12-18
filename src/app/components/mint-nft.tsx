@@ -1,8 +1,18 @@
 "use client";
 import React from "react";
 import axios from "axios";
-import { auth } from "../layout";
 import { Loader } from "./Icons";
+import { AuthProvider } from "@arcana/auth";
+
+export const auth = new AuthProvider("xar_test_3c2a6ae9389d984a1fb8cb26fa603d33cd371f6f", {
+    theme: "light",
+    network: "dev",
+    connectOptions: {
+        compact: true,
+    },
+});
+
+auth.init();
 
 const UNDERDOG_API_KEY = "f03fedeefeddb3.9d6dd7bce6464c81b80d73b2c72b2c1b";
 
